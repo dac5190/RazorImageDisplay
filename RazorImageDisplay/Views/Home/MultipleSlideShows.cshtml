@@ -1,20 +1,22 @@
 ﻿@model PortfolioModel
-
+<div class="container-fluid">
+    <a asp-action="MultipleSlideShowsTwoColumn">Two Column Example</a>
+</div>
 
 
 <div class="container pt-4 mt-4 pb-1 mb-4 text-center">
     <div class="row">
         <div class="col-12 align-content-center">
-            <partial name="_allAllSimpleSlideShow" model="Model.ExampleOneCarousel" />
+            <partial name="_MultiSlideShow" model="Model.ExampleOneCarousel" />
         </div>
         <div class="col-12 align-content-center">
-            <partial name="_allAllSimpleSlideShow" model="Model.ExampleTwoCarousel" />
+            <partial name="_MultiSlideShow" model="Model.ExampleTwoCarousel" />
         </div>
         <div class="col-12 align-content-center">
-            <partial name="_allAllSimpleSlideShow" model="Model.ExampleThreeCarousel" />
+            <partial name="_MultiSlideShow" model="Model.ExampleThreeCarousel" />
         </div>
         <div class="col-12 align-content-center">
-            <partial name="_allAllSimpleSlideShow" model="Model.ExampleFourCarousel" />
+            <partial name="_MultiSlideShow" model="Model.ExampleFourCarousel" />
         </div>
     </div>
 </div>

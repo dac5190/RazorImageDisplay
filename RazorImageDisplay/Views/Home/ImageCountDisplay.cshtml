@@ -1,1 +1,13 @@
 ﻿@model SlideShowModel
+<div class="container-fluid">
+    <a asp-action="ImageCountDisplayTwoColumn">Two Column Example</a>
+</div>
+
+
+<div class="container pt-4 mt-4 pb-1 mb-4 text-center">
+    <div class="row">
+        <div class="col-12 align-content-center">
+            <partial name="_allAllSimpleSlideShow" model="Model" />
+        </div>
+    </div>
+</div>

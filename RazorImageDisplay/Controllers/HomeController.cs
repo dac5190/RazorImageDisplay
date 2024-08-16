@@ -63,12 +63,15 @@ namespace RazorImageDisplay.Controllers
 
         public IActionResult SimpleSlideShow()
         {
-            return View();
+            SlideShowModel model = slideShowsFromCS.GetSlideShowModel();
+            return View(model);
         }
 
         public IActionResult SimpleSlideShowTwoColumn()
         {
-            return View();
+            SlideShowModel model = slideShowsFromCS.GetSlideShowModel();
+            model.twoColumn = true;
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

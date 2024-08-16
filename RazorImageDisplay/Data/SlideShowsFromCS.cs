@@ -76,6 +76,18 @@ namespace RazorImageDisplay.Data
             return GetFullExampleImages().OrderBy(item => random.Next()).ToList();
         }
 
+        public SlideShowModel GetSlideShowModel()
+        {
+            
+            SlideShowModel slideShowModel = new SlideShowModel()
+            {
+                Id = "ExampleOneCarousel",
+                slideShowImages = GetRandomSortImages()
+            };
+
+            return slideShowModel;
+        }
+
         public PortfolioModel GetPortfolioModel()
         {
             PortfolioModel portfolioModel = new PortfolioModel()
