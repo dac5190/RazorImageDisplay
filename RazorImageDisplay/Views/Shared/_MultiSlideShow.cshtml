@@ -1,0 +1,17 @@
+﻿@model SlideShowModel
+
+<div class="@(Model.twoColumn ? "col-md-6" : "col-md-3") mt-3 pt-3 carousel slide w-100" id="@Model.Id" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @if (Model != null && Model.slideShowImages != null && Model.slideShowImages.Count > 0)
+        {
+            int count = 0;
+            @foreach (var slide in Model.slideShowImages)
+            {
+                count++;
+                <div class="carousel-item @(count == 1 ? "active" : "")">
+                    <img src="@slide.ThumbUrl" class="border-0 bg-transparent w-100" alt="@slide.Alt">
+                </div>
+            }
+        }
+    </div>
+</div>

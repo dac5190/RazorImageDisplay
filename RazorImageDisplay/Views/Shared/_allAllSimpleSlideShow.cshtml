@@ -1,0 +1,22 @@
+﻿@model SlideShowModel
+
+@if (Model != null && Model.slideShowImages != null && Model.slideShowImages.Count > 0)
+{
+    <div class="popup-gallery">
+        <div class="row">
+            @{
+                int count = 0;
+            }
+            @foreach (var slide in Model.slideShowImages)
+            {
+                count++;
+                <div class="@(Model.twoColumn ? "col-md-6" : "col-md-3") mt-3 pt-3" id="@Model.Id">
+                    <span>@Model.Id &nbsp;-&nbsp; @count</span>
+                    <a class="border-0 bg-transparent" href="@slide.Url" title="@slide.Title">
+                        <img src="@slide.ThumbUrl" class="border-0 bg-transparent" alt="@slide.Alt">
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+}
